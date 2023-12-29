@@ -2,13 +2,13 @@ import React from "react";
 function Banner() {
   return (
     <div className="h-full w-full flex items-center justify-center relative ">
-      <div class="w-full relative">
+      <div className="w-full relative">
         <img
           src="https://www.industriousoffice.com/wp-content/uploads/2023/02/Pillar_Hero_What-is-coworking.jpg"
           alt=""
           className="h-[100vh] w-full object-cover"
         />
-        <div class="w-full h-full bg-gray-900/60 absolute inset-0"></div>
+        <div className="w-full h-full bg-gray-900/60 absolute inset-0"></div>
       </div>
       <div className="bg-slate-50/80 absolute h-fit px-4 py-7 w-2/4 z-10 flex flex-col items-center justify-center ">
         <div className="px-4 ">
