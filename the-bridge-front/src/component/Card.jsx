@@ -20,6 +20,8 @@ function Card() {
   }, []);
 
   const deleteCourse = (id) => {
+    alert("Are you sure you want to delete this course?");
+    if (!window.confirm("Are you sure you want to delete this course?")) return;
     api
       .delete(`/courses/${id}`)
       .then((res) => {
@@ -27,6 +29,7 @@ function Card() {
         setCourses(courses.filter((course) => course._id !== id));
       })
       .catch((err) => console.log(err));
+
   };
 
   const handleAdd = (course) => {
@@ -70,6 +73,8 @@ function Card() {
                     >
                       Delete
                     </button>
+                      
+
                   </div>
                 )}
               </div>
