@@ -39,7 +39,7 @@ const updateCourse = async (req, res) => {
         const course = await Course.findById(req.params.id);
         course.name = req.body.name;
         course.price = req.body.price;
-        course.img = req.body.img;
+        course.image = req.file.path;
         const updatedCourse = await course.save();
         res.json(updatedCourse);
     } catch (err) {

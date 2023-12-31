@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import products from "../assets/products.js";
 import AddModal from "./Modals/AddModal.jsx";
+import UpdateModal from "./Modals/UpdateModal.jsx";
 
 import api from "../api";
 
@@ -32,6 +33,10 @@ function Card() {
     setCourses([...courses, course]);
   }
 
+  const handleUpdate = (course) => {
+    setCourses(courses.map((c) => (c._id === course._id ? course : c)));
+  }
+
   return (
     <div className="p-6">
       {isAdminRoute && <AddModal onAdd={handleAdd} />}
@@ -55,9 +60,8 @@ function Card() {
                 </div>
                 {isAdminRoute && (
                   <div className="flex mt-2">
-                    <button className="bg-indigo-400 hover:bg-indigo-500 duration-200 text-white px-4 py-2 mr-2 rounded-md">
-                      Update
-                    </button>
+                    <UpdateModal onUpdate={handleUpdate} initialData={p}  />
+                 
                     <button
                       className="bg-red-400 hover:bg-red-500 duration-200 text-white px-4 py-2 rounded-md"
                       onClick={() => {

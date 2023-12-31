@@ -17,7 +17,7 @@ const upload = multer({ storage: storage });
 router.get('/', courseController.getAllCourses);
 router.get('/:id', courseController.getCourseById);
 router.post('/',upload.single('image'), courseController.createCourse);
-router.patch('/:id', courseController.updateCourse);
+router.patch('/:id',upload.single('image'), courseController.updateCourse);
 router.delete('/:id', courseController.deleteCourse);
 
 module.exports = router;

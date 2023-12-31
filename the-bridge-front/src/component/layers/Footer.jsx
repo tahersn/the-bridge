@@ -22,7 +22,7 @@ function Footer() {
         </div>
 
         <div className='flex justify-center p-2'>
-          <button type="submit" className='bg-pink-800 rounded-md text-sm text-white px-5 py-1'>Send message</button>
+          <button type="submit" className='hover:bg-pink-800 bg-pink-700 tracking-widest rounded-md text-sm text-white px-5 py-1'>Send message</button>
         </div>
       </form>
     </div>

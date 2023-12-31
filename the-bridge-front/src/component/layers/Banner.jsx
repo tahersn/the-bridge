@@ -17,7 +17,7 @@ function Banner() {
           </p>
         </div>
         <div>
-          <button className="rounded-2xl  justify-center items-center px-4 py-1 bg-pink-700 text-white  text-xl">
+          <button className="rounded-2xl  justify-center items-center px-4 py-1 bg-pink-700 hover:bg-pink-800 transition-transform text-white  text-xl">
             Register Now
           </button>
         </div>

@@ -15,7 +15,7 @@ function Home() {
       <div>
         <p className="font-bold text-black text-5xl ">Discover Courses</p>
       </div>
-      <button className="rounded-3xl  justify-center items-center h-fit px-5 py-1 bg-pink-700 text-white  text-xl">
+      <button className="rounded-3xl  justify-center items-center h-fit px-5 py-1 bg-pink-700 hover:bg-pink-800 transition:1s-ease-in-out text-white  text-xl">
         View More
       </button>
     </div>
