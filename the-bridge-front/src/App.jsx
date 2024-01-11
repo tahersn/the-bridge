@@ -4,6 +4,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Main from './views/Main'
 import Home from './views/Home'
 import Admin from './views/Admin'
+import WebRTCComponent from './views/WebRTCComponent'
 
 
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Main />}>
             <Route path='' element={<Home />} />
             <Route path='/admin' element={<Admin />} />
+            <Route path='/webrtc' element={<WebRTCComponent />} />
           </Route>
         </Routes>
       </BrowserRouter>
