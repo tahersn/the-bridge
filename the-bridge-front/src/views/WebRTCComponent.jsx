@@ -31,30 +31,30 @@ const [recieving, setRecieving] = useState(false);
   useEffect(() => {
 
    
-    const stompClient = new Client({
-      brokerURL: 'ws://localhost:8083/SpringMVC/websocket',
-      debug: function (str) {
-        console.log(str);
-      },
-      reconnectDelay: 5000,
-      heartbeatIncoming: 4000,
-      heartbeatOutgoing: 4000,
-    });
+    // const stompClient = new Client({
+    //   brokerURL: 'ws://localhost:8083/SpringMVC/websocket',
+    //   debug: function (str) {
+    //     console.log(str);
+    //   },
+    //   reconnectDelay: 5000,
+    //   heartbeatIncoming: 4000,
+    //   heartbeatOutgoing: 4000,
+    // });
 
-    stompClient.onConnect = function (frame) {
-      console.log('Connected to STOMP server');
-      stompClient.subscribe('/queue/messages', function (message) {
-        console.log(message.body);
-        const data = JSON.parse(message.body);
-      });
-    };
+    // stompClient.onConnect = function (frame) {
+    //   console.log('Connected to STOMP server');
+    //   stompClient.subscribe('/queue/messages', function (message) {
+    //     console.log(message.body);
+    //     const data = JSON.parse(message.body);
+    //   });
+    // };
 
-    stompClient.onStompError = function (frame) {
-      console.log('Error:', frame);
-    };
+    // stompClient.onStompError = function (frame) {
+    //   console.log('Error:', frame);
+    // };
 
-    stompClient.activate();
-    setClient(stompClient);
+    // stompClient.activate();
+    // setClient(stompClient);
 
     const peer = new Peer();
 
@@ -94,7 +94,7 @@ const [recieving, setRecieving] = useState(false);
       currentUserVideoRef.current.srcObject = mediaStream;
       currentUserVideoRef.current.play();
 
-      const call = peerInstance.current.call(remotePeerId, mediaStream)
+      const call = peerInstance.current.call(remotePeerId,mediaStream)
       console.log(mediaStream);
 
       call.on('stream', (remoteStream) => {
@@ -120,7 +120,7 @@ const [recieving, setRecieving] = useState(false);
     <h1>Current user id is {peerId}</h1>
     <input type="text" value={remotePeerIdValue} onChange={e => setRemotePeerIdValue(e.target.value)} style={{ width: '200px', height: '30px', fontSize: '16px' }} />
     <button onClick={() => call(remotePeerIdValue)} style={{ marginLeft: '10px', padding: '10px 20px', fontSize: '16px', backgroundColor:'green' }}>Call</button>
-    <button onClick={() => sendCallSignal()} style={{ marginLeft: '10px', padding: '10px 20px', fontSize: '16px', backgroundColor:'green' }}>send signal</button>
+    {/* <button onClick={() => sendCallSignal()} style={{ marginLeft: '10px', padding: '10px 20px', fontSize: '16px', backgroundColor:'green' }}>send signal</button> */}
 
     <div style={{ marginTop: '20px' }}>
       <video ref={currentUserVideoRef} style={{ width: '300px', height: '200px' }} />

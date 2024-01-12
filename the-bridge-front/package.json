@@ -12,7 +12,9 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@stomp/stompjs": "^7.0.0",
+    "@types/simple-peer": "^9.11.8",
     "axios": "^1.6.3",
+    "events": "^3.3.0",
     "peerjs": "^1.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,7 +22,8 @@
     "react-router-dom": "^6.21.1",
     "simple-peer": "^9.11.1",
     "socket.io-client": "^4.7.3",
-    "stompjs": "^2.3.3"
+    "stompjs": "^2.3.3",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

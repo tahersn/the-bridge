@@ -5,7 +5,7 @@ import Main from './views/Main'
 import Home from './views/Home'
 import Admin from './views/Admin'
 import WebRTCComponent from './views/WebRTCComponent'
-
+import { WebRTCSimple } from './views/WebRTCSimple'
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
             <Route path='' element={<Home />} />
             <Route path='/admin' element={<Admin />} />
             <Route path='/webrtc' element={<WebRTCComponent />} />
+            <Route path='/simple' element={<WebRTCSimple />} />
           </Route>
         </Routes>
       </BrowserRouter>
